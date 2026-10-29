@@ -36,21 +36,3 @@ html.hh-page-scroll .reading-progress {position:absolute;will-change:transform}
 @media print {
   html.hh-page-scroll,html.hh-page-scroll body {overflow:visible!important}
 }
-
-
-/* Use the publication's original masthead artwork and navy-on-white header. */
-.feature-bar { background:#fff; border-bottom-color:#e2e6e9; min-height:90px; padding:12px 5%; }
-.brand { display:block; width:340px; max-width:100%; min-width:0; letter-spacing:normal; }
-.brand-masthead { display:block; width:100%; height:auto; }
-.brand span { color:#0e2a3f; margin-top:5px; }
-.feature-bar .brand { flex:0 1 340px; }
-.feature-bar .controls { flex-shrink:0; }
-.feature-bar .controls button { color:#0e2a3f; border-color:#9eabb4; }
-.feature-bar .controls button:hover { color:#0e2a3f; border-color:#0e2a3f; background:#edf2f5; }
-footer .brand { width:290px; padding:10px 12px; background:#fff; }
-@media(max-width:620px) {
-  .feature-bar { min-height:76px; padding:12px 5%; gap:10px; }
-  .feature-bar .brand { flex:1 1 190px; max-width:210px; }
-  .brand span { font-size:6px; letter-spacing:1.4px; }
-  footer .brand { width:250px; }
-}
