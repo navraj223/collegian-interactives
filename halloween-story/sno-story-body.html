@@ -1,7 +1,20 @@
 <style>
+/* Keep the site masthead and everything above its navigation white. */
 html:has(#hh-halloween-feature),
 body:has(#hh-halloween-feature),
 body:has(#hh-halloween-feature) #wrap,
+body:has(#hh-halloween-feature) #wrap > header,
+body:has(#hh-halloween-feature) .sno-header-wrap {
+  background:#fff!important;
+}
+body:has(#hh-halloween-feature) .sno-header-wrap > .sno-designer-area-row:not(:has(nav)),
+body:has(#hh-halloween-feature) .sno-header-wrap > .sno-designer-area-row:not(:has(nav)) .sno-hac-row-wrap,
+body:has(#hh-halloween-feature) .sno-header-wrap > .sno-designer-area-row:not(:has(nav)) .sno-designer-area-container,
+body:has(#hh-halloween-feature) .sno-header-wrap > .sno-designer-area-row:not(:has(nav)) .sno-hac-inner {
+  background:#fff!important;
+  color:#0e2a3f;
+}
+/* The Halloween palette begins in the story region below navigation. */
 body:has(#hh-halloween-feature) #sno-sites-main-content,
 body:has(#hh-halloween-feature) #sno-main-content {
   background:#18131f!important;
@@ -65,7 +78,7 @@ body:has(#hh-halloween-feature) {overflow-x:clip!important}
   <iframe
     data-hh-page-scroll
     data-top-offset="80"
-    src="https://navrajd.com/collegian-interactives/halloween-story/?v=page-scroll-1"
+    src="https://navrajd.com/collegian-interactives/halloween-story/?v=branding-2"
     title="Trick or trunk? An interactive Collegian Halloween feature"
     width="100%"
     height="900"
@@ -75,4 +88,4 @@ body:has(#hh-halloween-feature) {overflow-x:clip!important}
 <!-- This script must execute ON THE SNO PAGE.
      If the editor filters it, load this same script through an approved SNO
      custom-code location instead. It does nothing on pages without this iframe. -->
-<script src="https://navrajd.com/collegian-interactives/halloween-story/halloween-parent.js?v=page-scroll-1" defer></script>
+<script src="https://navrajd.com/collegian-interactives/halloween-story/halloween-parent.js?v=branding-2" defer></script>
