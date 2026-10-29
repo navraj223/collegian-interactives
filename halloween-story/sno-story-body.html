@@ -1,0 +1,62 @@
+<!-- Paste this entire file into the SNO story body's Text/HTML editor.
+     The iframe URL below is the verified deployed feature.
+     Keep your existing SNO headline, byline, and featured-image fields.
+     All reporting and animation live in the hosted index.html.
+     Do not keep the old article paragraphs in this body too: that duplicates it. -->
+
+<style>
+/* Scoped to this story by the presence of the feature's unique ID. */
+body:has(#hh-halloween-feature) #sno-main-content,
+body:has(#hh-halloween-feature) #sno-story-body-content {
+  background:#18131f;
+  color:#f4e8ce;
+}
+body:has(#hh-halloween-feature) #sno-main-content h1 {
+  color:#f4e8ce;
+}
+body:has(#hh-halloween-feature) .sno-story-deck,
+body:has(#hh-halloween-feature) .sno-story-byline,
+body:has(#hh-halloween-feature) .sno-story-byline span {
+  color:#d8c9d7;
+}
+body:has(#hh-halloween-feature) .sno-story-byline a {
+  color:#efa15f;
+}
+#hh-halloween-feature {
+  width:100%;
+  margin:0;
+  padding:0;
+  background:#18131f;
+  color:#f4e8ce;
+  border:1px solid #705469;
+}
+#hh-halloween-feature iframe {
+  display:block;
+  width:100%;
+  height:88svh;
+  min-height:690px;
+  max-height:1000px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:#18131f;
+}
+@media(max-width:620px) {
+  #hh-halloween-feature iframe {
+    height:85svh;
+    min-height:610px;
+  }
+}
+</style>
+
+<div id="hh-halloween-feature">
+  <!-- Hosted feature verified at the URL below. The root doorbell remains separate. -->
+  <iframe
+    src="https://navrajd.com/collegian-interactives/halloween-story/"
+    title="Trick or trunk? An interactive Collegian Halloween feature"
+    width="100%"
+    height="800"
+    loading="eager"
+    style="display:block;width:100%;border:0;background:#18131f;"
+  ></iframe>
+</div>
