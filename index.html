@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small, interactive Halloween doorway for a Collegian story.">
+  <title>A little Halloween nostalgia | Collegian interactive</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<main id="collegian-halloween-story" aria-label="Halloween doorway interactive">
+  <details class="hh-doorbell">
+    <summary>
+      <span class="hh-scene" aria-hidden="true">
+        <span class="hh-frame">
+          <span class="hh-candy">✦ ✦</span>
+          <span class="hh-door"></span>
+        </span>
+        <span class="hh-bell"></span>
+        <span class="hh-step"></span>
+      </span>
+      <span>
+        <span class="hh-label">A LITTLE HALLOWEEN NOSTALGIA</span>
+        <span class="hh-title">Remember this part?</span>
+        <span class="hh-caption">The front porch. The candy bag. The wait for someone to answer.</span>
+        <span class="hh-button">
+          <span class="hh-ring">Ring the doorbell →</span>
+          <span class="hh-close">Close the door ↺</span>
+        </span>
+      </span>
+    </summary>
+    <p class="hh-message">Happy Halloween! A familiar doorstep, a familiar tradition.</p>
+  </details>
+  <label class="sound-option" hidden><input id="sound" type="checkbox"> Play a doorbell sound when opening</label>
+  <span id="audio-status" role="status" style="font-size:13px"></span>
+</main>
+</body>
+</html>

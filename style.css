@@ -1,0 +1,102 @@
+#collegian-halloween-story {
+  width: 100%; max-width: 750px; margin: 0 auto;
+  color: #17313f; font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 20px; line-height: 1.65;
+}
+#collegian-halloween-story p { margin: 0 0 22px; }
+#collegian-halloween-story a { color: #317da0; text-decoration: underline; }
+#collegian-halloween-story .hh-doorbell {
+  margin: 30px 0; padding: 0; background: #f8f5ef;
+  border: 0; border-top: 3px solid #17313f;
+  border-bottom: 1px solid #dfd8cd; box-shadow: none;
+}
+#collegian-halloween-story .hh-doorbell summary {
+  display: grid; grid-template-columns: 180px 1fr; align-items: center;
+  gap: 25px; padding: 24px; cursor: pointer; list-style: none;
+}
+#collegian-halloween-story .hh-doorbell summary::-webkit-details-marker { display: none; }
+#collegian-halloween-story .hh-doorbell summary:focus-visible {
+  outline: 3px solid #bd6538; outline-offset: 3px;
+}
+#collegian-halloween-story .hh-scene {
+  display: block; position: relative; height: 195px;
+  background: #eae4d9; overflow: hidden;
+}
+#collegian-halloween-story .hh-frame {
+  display: block; position: absolute; width: 87px; height: 149px;
+  left: 50%; bottom: 16px; margin-left: -44px;
+  border: 6px solid #17313f; background: #ffdda1; perspective: 500px;
+}
+#collegian-halloween-story .hh-door {
+  display: block; position: absolute; inset: 0;
+  background: #38606c; transform-origin: left;
+  transition: transform .8s ease;
+}
+#collegian-halloween-story .hh-door::before {
+  content: ''; position: absolute; width: 37px; height: 39px;
+  left: 19px; top: 17px; background: #ffd28c;
+  border: 4px solid #24434d;
+}
+#collegian-halloween-story .hh-door::after {
+  content: ''; position: absolute; right: 9px; top: 81px;
+  width: 7px; height: 7px; border-radius: 50%; background: #ffd28c;
+}
+#collegian-halloween-story .hh-candy {
+  position: absolute; left: 17px; top: 68px;
+  display: block; color: #9c4e2a; font-size: 25px;
+}
+#collegian-halloween-story .hh-step {
+  position: absolute; width: 125px; height: 9px;
+  bottom: 8px; left: 50%; margin-left: -63px; background: #a7aa95;
+}
+#collegian-halloween-story .hh-bell {
+  position: absolute; left: calc(50% + 54px); top: 105px;
+  width: 13px; height: 23px; background: #17313f; border-radius: 3px;
+}
+#collegian-halloween-story .hh-bell::after {
+  content: ''; position: absolute; inset: 7px 4px;
+  border-radius: 50%; background: #ffd28c;
+}
+#collegian-halloween-story .hh-label {
+  display: block; font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; color: #99502d; margin-bottom: 9px;
+}
+#collegian-halloween-story .hh-title {
+  display: block; font-size: 24px; font-weight: 700;
+  line-height: 1.25; margin-bottom: 10px;
+}
+#collegian-halloween-story .hh-caption {
+  display: block; font-size: 14px; line-height: 1.6; margin-bottom: 17px;
+}
+#collegian-halloween-story .hh-button {
+  display: inline-block; background: #17313f; color: #fff;
+  padding: 10px 15px; font-size: 13px; font-weight: 700;
+}
+#collegian-halloween-story .hh-doorbell summary:hover .hh-button { background: #99502d; }
+#collegian-halloween-story .hh-close { display: none; }
+#collegian-halloween-story .hh-doorbell[open] .hh-door { transform: rotateY(-110deg); }
+#collegian-halloween-story .hh-doorbell[open] .hh-ring { display: none; }
+#collegian-halloween-story .hh-doorbell[open] .hh-close { display: inline; }
+#collegian-halloween-story .hh-message {
+  margin: 0; padding: 0 24px 22px; font-size: 15px;
+  line-height: 1.6; color: #99502d;
+}
+@media (max-width: 500px) {
+  #collegian-halloween-story { font-size: 18px; }
+  #collegian-halloween-story .hh-doorbell summary {
+    grid-template-columns: 110px minmax(0, 1fr); gap: 15px; padding: 18px 12px;
+  }
+  #collegian-halloween-story .hh-title { font-size: 20px; }
+  #collegian-halloween-story .hh-caption { font-size: 13px; }
+  #collegian-halloween-story .hh-bell { left: calc(50% + 44px); width: 10px; }
+  #collegian-halloween-story .hh-bell::after { inset: 7px 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #collegian-halloween-story .hh-door { transition: none; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 12px; background: #fff; }
+#collegian-halloween-story .hh-doorbell { margin: 0; }
+#collegian-halloween-story .sound-option { display: block; padding: 12px 16px; font-size: 13px; }
+#collegian-halloween-story .sound-option[hidden] { display: none; }
+#collegian-halloween-story .sound-option input { accent-color: #17313f; }
