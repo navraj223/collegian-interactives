@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18131f">
+  <meta name="description" content="Fresno State students weigh Halloween traditions in this interactive presentation of The Collegian’s report.">
+  <title>Trick or trunk? — The Collegian</title>
+  <link rel="stylesheet" href="./halloween.css">
+  <script src="./halloween.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#reporting">Skip to the story</a>
+<svg class="art-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+  <linearGradient id="hh-window" x2="0" y2="1"><stop stop-color="#ffe6a3"/><stop offset="1" stop-color="#f2a160"/></linearGradient>
+  <radialGradient id="hh-glow"><stop stop-color="#f9c57b" stop-opacity=".26"/><stop offset="1" stop-color="#f9c57b" stop-opacity="0"/></radialGradient>
+  <pattern id="hh-siding" width="100" height="21" patternUnits="userSpaceOnUse"><rect width="100" height="21" fill="#4b4255"/><path d="M0 20.5H100" stroke="#8d7a86" stroke-opacity=".25"/></pattern>
+  <symbol id="hh-pumpkin" viewBox="0 0 100 100"><path d="M45 24l5-19 12 3-8 20" fill="#939c72"/><ellipse cx="50" cy="59" rx="46" ry="34" fill="#e58b4b"/><ellipse cx="50" cy="59" rx="27" ry="34" fill="#f2a261"/><path d="M24 52l12-14 8 16m14 0 8-16 12 14M27 68l46-1-13 14H39z" fill="#352638"/></symbol>
+  <symbol id="hh-house-shell" viewBox="0 0 600 600">
+    <ellipse cx="300" cy="383" rx="252" ry="215" fill="url(#hh-glow)"/>
+    <path d="M140 207V98h55v85" fill="#352e40"/><path d="M132 98h73v18h-73" fill="#57495b"/>
+    <path d="M86 254L300 81l214 173-21 18-193-152-193 152z" fill="#100f1b"/>
+    <path d="M112 250l188-147 188 147v264H112" fill="url(#hh-siding)"/>
+    <path d="M96 259l204-161 204 161" fill="none" stroke="#7d6378" stroke-width="7"/>
+    <path d="M283 153h34v67h-34" fill="#f2c282"/><path d="M300 153v67m-17-34h34" stroke="#312b3b" stroke-width="5"/>
+    <rect x="151" y="282" width="75" height="108" rx="36" fill="url(#hh-window)"/><path d="M189 282v108m-38-54h75" stroke="#2d2737" stroke-width="7"/>
+    <rect x="374" y="282" width="75" height="108" rx="36" fill="url(#hh-window)"/><path d="M411 282v108m-37-54h75" stroke="#2d2737" stroke-width="7"/>
+    <path d="M249 513V363a51 51 0 0 1 102 0v150" fill="#171321" stroke="#8b6c71" stroke-width="8"/>
+    <path d="M258 513V365a42 42 0 0 1 84 0v148" fill="#fbd093"/>
+    <path d="M243 515h116l25 19H218zM219 534h165v15H219" fill="#8c7b86"/>
+    <path d="M239 549h124l38 51H199z" fill="#7a6877"/>
+    <path d="M115 434h113m144 0h113M130 434v81m24-81v81m24-81v81m24-81v81m186-81v81m24-81v81m24-81v81m24-81v81" stroke="#9e8390" stroke-width="5"/>
+    <path d="M112 250q80 50 188 0t188 0" fill="none" stroke="#b5a07b" stroke-width="2"/><g fill="#f4c77f"><circle cx="137" cy="262" r="4"/><circle cx="176" cy="270" r="4"/><circle cx="219" cy="270" r="4"/><circle cx="261" cy="261" r="4"/><circle cx="304" cy="250" r="4"/><circle cx="347" cy="239" r="4"/><circle cx="390" cy="231" r="4"/><circle cx="433" cy="234" r="4"/><circle cx="476" cy="245" r="4"/></g>
+    <use href="#hh-pumpkin" x="126" y="463" width="76" height="76"/><use href="#hh-pumpkin" x="397" y="479" width="58" height="58"/>
+    <rect x="366" y="355" width="12" height="25" rx="3" fill="#d5aa78"/><circle cx="372" cy="367" r="3" fill="#fff1be"/>
+  </symbol>
+  <symbol id="hh-door-leaf" viewBox="0 0 90 200"><path d="M3 200V48a42 42 0 0 1 84 0v152" fill="#86647a" stroke="#4d3b51" stroke-width="5"/><path d="M20 72V48a25 25 0 0 1 50 0v24z" fill="#e2b882"/><rect x="20" y="101" width="49" height="70" fill="none" stroke="#61475e" stroke-width="4"/><circle cx="72" cy="119" r="4" fill="#f6d89b"/></symbol>
+  <symbol id="hh-car-shell" viewBox="0 0 600 600">
+    <ellipse cx="300" cy="390" rx="248" ry="190" fill="url(#hh-glow)"/>
+    <path d="M123 307l34-114q8-30 44-30h198q36 0 44 30l34 114" fill="#6d8980" stroke="#29413e" stroke-width="7"/>
+    <path d="M180 188h240l27 103H154z" fill="#203b3a"/>
+    <rect x="116" y="284" width="368" height="230" rx="45" fill="#68867e" stroke="#a8b7a0" stroke-width="5"/>
+    <rect x="161" y="305" width="278" height="137" rx="16" fill="#142c2b"/>
+    <path d="M169 428q50-80 91-16t86-5 86 21" fill="#ad794f"/><g fill="#f0b473"><path d="M194 388l14-10 14 13-15 13zM241 408l15-12 15 15-14 13zM311 388l13-15 15 13-13 15zM370 410l13-12 17 15-16 12zM401 377l10-10 12 11-10 11z"/></g>
+    <path d="M164 311q126 74 272 0" fill="none" stroke="#daab66" stroke-width="4" stroke-dasharray="2 17"/>
+    <rect x="128" y="324" width="23" height="63" rx="6" fill="#f0a078"/><rect x="449" y="324" width="23" height="63" rx="6" fill="#f0a078"/>
+    <rect x="255" y="462" width="90" height="31" rx="4" fill="#eee2b8"/><text x="300" y="483" text-anchor="middle" font-family="Georgia,serif" font-size="17" fill="#344642">BOO!</text>
+    <path d="M114 495h372" stroke="#344e47" stroke-width="14"/><rect x="128" y="507" width="43" height="43" rx="8" fill="#141721"/><rect x="429" y="507" width="43" height="43" rx="8" fill="#141721"/>
+    <use href="#hh-pumpkin" x="55" y="472" width="80" height="80"/><use href="#hh-pumpkin" x="481" y="490" width="60" height="60"/>
+  </symbol>
+  <symbol id="hh-trunk-lid" viewBox="0 0 290 150"><rect x="4" y="4" width="282" height="140" rx="17" fill="#77958a" stroke="#a4b49c" stroke-width="7"/><rect x="24" y="20" width="242" height="108" rx="9" fill="#536f65"/><path d="M125 130h40" stroke="#213d37" stroke-width="5"/></symbol>
+  <symbol id="hh-bat" viewBox="0 0 100 45"><path d="M0 4q20 22 34 7l10 10 6-12 6 12 10-10Q80 26 100 4L83 40q-15-19-27-5l-6 9-6-9Q32 21 17 40z" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<header class="feature-bar"><a href="#top" class="brand">The Collegian<span>A HALLOWEEN FEATURE</span></a><div class="controls"><button id="motion-toggle" type="button" aria-pressed="true">Motion on</button><button id="sound-toggle" type="button" aria-pressed="false">Sound off <span aria-hidden="true">♪</span></button></div></header>
+
+<main>
+<section class="hero" id="top" aria-labelledby="headline">
+  <div class="hero-stars" aria-hidden="true"></div><div class="moon" aria-hidden="true"></div>
+  <svg class="bat bat-one" viewBox="0 0 100 45" aria-hidden="true"><use href="#hh-bat"/></svg><svg class="bat bat-two" viewBox="0 0 100 45" aria-hidden="true"><use href="#hh-bat"/></svg>
+  <div class="hero-copy"><p class="eyebrow"><span class="little-star">✦</span> FRESNO STATE · LIFESTYLE</p><h1 id="headline">Trick <i>or</i><br><em>trunk?</em></h1><p class="hero-subtitle">Fresno State students weigh<br>Halloween traditions.</p><p class="deck">Students share what they love about going door-to-door and whether trunk-or-treating holds the same charm.</p><p class="byline">By <strong>Nazish S. Iftiaz</strong><span>Staff Reporter · October 28, 2026</span></p><a class="read-link" href="#reporting">FOLLOW THE CANDY TRAIL <span aria-hidden="true">↓</span></a></div>
+  <div class="hero-landscape" aria-hidden="true"><div class="hill hill-back"></div><div class="hill hill-front"></div><svg class="hero-house" viewBox="0 0 600 600"><use href="#hh-house-shell"/><use href="#hh-door-leaf" x="255" y="319" width="90" height="196"/></svg><svg class="hero-car" viewBox="0 0 600 600"><use href="#hh-car-shell"/><use href="#hh-trunk-lid" x="155" y="219" width="290" height="150" transform="rotate(-8 300 219)"/></svg><div class="bare-tree"></div></div>
+  <div class="hero-caption"><span>ONE HOLIDAY. MORE THAN ONE DOORWAY.</span><span aria-hidden="true">SCROLL TO BEGIN ↓</span></div>
+</section>
+
+<nav class="chapter-nav" aria-label="Story chapters"><a href="#porch" class="active" data-nav="porch"><span>01</span> The porch</a><a href="#trunk" data-nav="trunk"><span>02</span> The parking lot</a><a href="#neighborhood" data-nav="neighborhood"><span>03</span> The neighborhood</a></nav>
+
+<section class="opening" id="reporting"><p class="eyebrow">THE WAY WE HALLOWEEN IS CHANGING</p><h2>A familiar night.<br><i>A different doorstep.</i></h2><p class="opening-note">From front porches to decorated trunks, the route to a bag of candy is changing.</p><span class="opening-line" aria-hidden="true"></span></section>
+
+<div class="story-layout">
+  <aside class="scene-column" aria-label="Illustrated Halloween scenes">
+    <div class="sticky-scene" data-current-scene="porch">
+      <div class="scene-head"><span class="scene-count">01 / 03</span><span class="scene-name">THE PORCH</span></div>
+      <div class="scene-art">
+        <div class="scene-halo" aria-hidden="true"></div>
+        <svg class="porch-art" viewBox="0 0 600 600" aria-hidden="true"><use href="#hh-house-shell"/><g class="candy-behind"><path d="M285 425l15-12 16 13-16 16z" fill="#bb7047"/><path d="M271 457l10-9 11 10-10 10zm37-4 12-11 12 12-12 11z" fill="#a57857"/></g><g class="door-leaf"><use href="#hh-door-leaf" x="255" y="319" width="90" height="196"/></g></svg>
+        <svg class="trunk-art" viewBox="0 0 600 600" aria-hidden="true"><use href="#hh-car-shell"/><g class="trunk-lid"><use href="#hh-trunk-lid" x="155" y="302" width="290" height="150"/></g></svg>
+        <svg class="neighborhood-art" viewBox="0 0 600 600" aria-hidden="true"><path d="M0 491q280-85 600 0" stroke="#9a785e" stroke-width="15" fill="none"/><use href="#hh-house-shell" x="-30" y="70" width="390" height="390"/><use href="#hh-door-leaf" x="135" y="277" width="59" height="127"/><use href="#hh-car-shell" x="290" y="270" width="270" height="270"/><path d="M166 471q111 53 245 10" fill="none" stroke="#eeb873" stroke-width="3" stroke-dasharray="2 13"/><g fill="#efb773"><circle cx="224" cy="452" r="8"/><path d="M216 466h16l8 35h-32z"/><circle cx="277" cy="460" r="7"/><path d="M270 473h14l6 30h-26z"/></g></svg>
+      </div>
+      <div class="scene-controls"><button class="scene-action" type="button">Ring the doorbell <span aria-hidden="true">↗</span></button><p class="scene-hint" role="status">Scroll to open the door, or give the bell a ring.</p></div>
+      <div class="scene-meter" aria-hidden="true"><span></span></div>
+    </div>
+  </aside>
+
+  <article class="story-copy" aria-label="Reported story">
+    <section class="story-step" id="porch" data-scene="porch" data-phase="0" data-label="THE PORCH"><p class="section-kicker">01 / THE PORCH</p><h2>It used to start<br>with a doorbell.</h2>
+<p data-source-paragraph="0">Remember going <a href="https://www.history.com/articles/halloween-trick-or-treating-origins">door-to-door for Halloween candy?</a> Well, that looks a little different now.</p>
+<p data-source-paragraph="1">There’s a rising method called <a href="https://www.npr.org/2023/10/31/1209559780/what-is-trunk-or-treat-halloween">trunk-or-treating</a>, which involves none other than a car. At trunk-or-treat events, children go from car to car collecting candy from decorated trunks.</p>
+<p data-source-paragraph="2">Using the trunks of a few Halloween-decorated cars, community organizations, local institutions and parent clubs have made the spooky holiday a bit different than what we remember.</p>
+<p data-source-paragraph="3">But what about the doorbell? What about going up to an actual house, pressing that little button and hearing the sound of the bell flow through the house from the outside while you wait for the door to open?</p>
+    </section>
+    <section class="story-step" id="memories" data-scene="porch" data-phase="1" data-label="THE DOORBELL DAYS"><p class="section-kicker">THE DOORBELL DAYS</p><h2>Some traditions<br>stay with us.</h2>
+<p data-source-paragraph="4">“I personally prefer the traditional trick-or-treating because of the nostalgia of it,” said Eva Mihalcin, Fresno State student.</p>
+<p data-source-paragraph="5">Mihalcin said she has only ever been to one or two trunk-or-treat events.</p>
+<p data-source-paragraph="6">“It’s a mix of good and bad,” she said. “Good because it’s probably a safer option than letting kids go out to trick-or-treat nowadays, but I guess more of bad because the nostalgia of going out and trick-or-treating is a pretty big thing.”</p>
+<p data-source-paragraph="7">For many people born in the early 2000s or earlier, going door-to-door with friends or family brings back childhood Halloween memories.</p>
+<p data-source-paragraph="8">But for the younger kids today, trunk-or-treating will inevitably be their reminiscent version of what we experienced.</p>
+    </section>
+    <section class="story-step quote-step" id="trunk" data-scene="trunk" data-phase="0" data-label="THE PARKING LOT"><p class="section-kicker">02 / THE PARKING LOT</p><span class="quote-mark" aria-hidden="true">“</span>
+<p data-source-paragraph="9">“It’s more of an interactive experience for the kids,” said Rayder Silva, another student at Fresno State.</p>
+    </section>
+    <section class="story-step" id="new-tradition" data-scene="trunk" data-phase="1" data-label="A NEW TRADITION"><p class="section-kicker">A DIFFERENT KIND OF DOOR</p><h2>New routes.<br>New memories.</h2>
+<p data-source-paragraph="10">Rather than going long distances in various neighborhoods, Silva thinks trunk-or-treating is a better approach to them enjoying the holiday.</p>
+<p data-source-paragraph="11">Art major Dora Youngblood said having candy set out by the doors, watching kids come by in their costumes and interacting with them are why she prefers door-to-door trick-or-treating. Even her grandkids enjoy participating in it.</p>
+    </section>
+    <section class="story-step" id="neighborhood" data-scene="neighborhood" data-phase="0" data-label="THE NEIGHBORHOOD"><p class="section-kicker">03 / THE NEIGHBORHOOD</p><h2>A little closer<br>to home.</h2>
+<p data-source-paragraph="12">In her neighborhood, the kids aren’t the only ones who get to enjoy the holiday. While the kids get their sweets, the adults can enjoy tacos and hot dogs, Youngblood said.</p>
+<p data-source-paragraph="13">“They have various activities and the church folks in my neighborhood are the ones giving out food sometimes,” Youngblood said.</p>
+<p data-source-paragraph="14">She likes being able to enjoy the holiday with family near her own home rather than having to go elsewhere.</p>
+    </section>
+  </article>
+</div>
+
+<section class="ending" id="ending"><span class="ending-spark" aria-hidden="true">✦</span><p class="eyebrow">WHICHEVER WAY YOU GO</p><h2>Different doors.<br><i>Same sweet ending.</i></h2>
+<p data-source-paragraph="15">Both methods work differently for people. Either way, the night still ends with a bag of candy.</p>
+<div class="candy-trail" aria-hidden="true"><span>✦</span><span>◆</span><span>✦</span><span>◆</span><span>✦</span></div><a class="back-top" href="#top">BACK TO THE BEGINNING ↑</a></section>
+</main>
+<footer><a class="brand" href="https://fscollegian.com/" target="_blank" rel="noopener">The Collegian<span>FRESNO STATE</span></a><p>Reporting by Nazish S. Iftiaz.<br>An interactive presentation of the original story.</p><a href="https://fscollegian.com/2026/10/trick-or-trunk-fresno-state-students-weigh-halloween-traditions/" target="_blank" rel="noopener">Original report ↗</a></footer>
+<noscript><p class="no-script">The complete story is available above. Enable JavaScript to animate the illustrations.</p></noscript>
+</body></html>
