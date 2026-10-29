@@ -12,6 +12,14 @@
       let connected = false;
       let queued = false;
       let measuredHeight = 0;
+      let pendingScroll = 0;
+      let scrollFrame = 0;
+      // WordPress can insert paragraph markup into pasted style blocks.
+      // Keep the frame's critical box styles independent of that formatting.
+      frame.style.display = 'block';
+      frame.style.width = '100%';
+      frame.style.border = '0';
+      frame.style.boxSizing = 'border-box';
       function send(type, values) {
         if (frame.contentWindow) frame.contentWindow.postMessage(
           Object.assign({ channel: CHANNEL, type: type }, values), origin);
@@ -34,7 +42,26 @@
         if (!queued) { queued = true; requestAnimationFrame(state); }
       }
       function scrollToPosition(top, behavior) {
-        window.scrollTo({ top: Math.max(0, top), behavior: behavior || 'instant' });
+        const target = Math.max(0, top);
+        if (behavior === 'smooth') {
+          window.scrollTo({ top: target, behavior: 'smooth' });
+          return;
+        }
+        // Use Safari's numeric scrolling API, without a CSS smooth-scroll delay.
+        const root = document.scrollingElement || document.documentElement;
+        const previous = root.style.getPropertyValue('scroll-behavior');
+        const priority = root.style.getPropertyPriority('scroll-behavior');
+        root.style.setProperty('scroll-behavior', 'auto', 'important');
+        window.scrollTo(0, target);
+        if (previous) root.style.setProperty('scroll-behavior', previous, priority);
+        else root.style.removeProperty('scroll-behavior');
+      }
+      function flushScroll() {
+        scrollFrame = 0;
+        const delta = pendingScroll;
+        pendingScroll = 0;
+        scrollToPosition(window.scrollY + delta);
+        schedule();
       }
       window.addEventListener('message', function (event) {
         if (event.source !== frame.contentWindow || event.origin !== origin) return;
@@ -56,10 +83,13 @@
         }
         if (!connected) return;
         if (data.type === 'scroll-by' && Number.isFinite(data.delta)) {
-          scrollToPosition(window.scrollY + Math.max(-5000, Math.min(5000, data.delta)));
-          schedule();
+          pendingScroll += Math.max(-5000, Math.min(5000, data.delta));
+          if (!scrollFrame) scrollFrame = requestAnimationFrame(flushScroll);
         }
         if (data.type === 'scroll-to' && Number.isFinite(data.y)) {
+          cancelAnimationFrame(scrollFrame);
+          scrollFrame = 0;
+          pendingScroll = 0;
           const frameTop = frame.getBoundingClientRect().top + window.scrollY;
           const within = Math.max(0, Math.min(measuredHeight, data.y));
           const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

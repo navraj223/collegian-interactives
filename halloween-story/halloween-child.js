@@ -83,27 +83,28 @@
     send('scroll-by', { delta: event.deltaY * factor });
   }, { passive: false });
   // Touch gestures scroll the main document, including a short inertial finish.
-  window.addEventListener('touchstart', function (event) {
+  document.addEventListener('touchstart', function (event) {
     cancelAnimationFrame(momentum);
     if (!active || event.touches.length !== 1) { touch = null; return; }
     const point = event.touches[0];
     touch = { x: point.clientX, y: point.clientY, time: performance.now(), speed: 0, vertical: null };
   }, { passive: true });
-  window.addEventListener('touchmove', function (event) {
+  document.addEventListener('touchmove', function (event) {
     if (!active || !touch || event.touches.length !== 1) return;
     const point = event.touches[0];
     const delta = touch.y - point.clientY;
     const now = performance.now();
     if (touch.vertical === null && Math.abs(delta) + Math.abs(touch.x - point.clientX) > 5) touch.vertical = Math.abs(delta) >= Math.abs(touch.x - point.clientX);
     if (!touch.vertical) return;
-    if (!event.cancelable) { touch = null; return; }
-    event.preventDefault();
+    // Safari may deliver non-cancelable moves after it classifies a gesture.
+    // That prevents cancellation, not forwarding to the outer document.
+    if (event.cancelable) event.preventDefault();
     touch.speed = .6 * touch.speed + .4 * delta / Math.max(1, now - touch.time);
     touch.y = point.clientY;
     touch.time = now;
     send('scroll-by', { delta: delta });
-  }, { passive: false });
-  window.addEventListener('touchend', function () {
+  }, { passive: false, capture: true });
+  document.addEventListener('touchend', function () {
     if (!touch) return;
     let speed = touch.vertical && performance.now() - touch.time < 100 ? Math.max(-2.5, Math.min(2.5, touch.speed)) : 0;
     touch = null;
@@ -118,7 +119,7 @@
     }
     if (speed) momentum = requestAnimationFrame(coast);
   }, { passive: true });
-  window.addEventListener('touchcancel', function () { touch = null; cancelAnimationFrame(momentum); }, { passive: true });
+  document.addEventListener('touchcancel', function () { touch = null; cancelAnimationFrame(momentum); }, { passive: true });
   function editable(element) { return element && (element.isContentEditable || element.closest('input,textarea,select,[contenteditable="true"]')); }
   window.addEventListener('keydown', function (event) {
     if (!active || !window.hhPageViewport || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || editable(event.target)) return;

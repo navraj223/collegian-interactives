@@ -22,7 +22,7 @@ html.hh-page-scroll body {
   min-height:0!important;
   overflow:hidden!important;
   scroll-behavior:auto!important;
-  touch-action:pan-x pinch-zoom;
+  touch-action:pinch-zoom;
 }
 html.hh-page-scroll .hero {height:calc(var(--hh-viewport-height, 800px) - 56px)}
 html.hh-page-scroll .chapter-nav {position:relative;top:auto;will-change:transform}
