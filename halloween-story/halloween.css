@@ -14,3 +14,25 @@
 
 .neighborhood-lit .neighborhood-art{filter:drop-shadow(0 0 18px #f6c27c66)}.neighborhood-lit .scene-halo{background:radial-gradient(ellipse,#edb47955,transparent 70%)}
 @media(min-width:621px) and (max-width:900px){.story-step>p:not(.section-kicker){font-size:17px}.quote-step>p:not(.section-kicker){font-size:31px;line-height:1.4}}
+
+/* Activated only after a verified parent-page JavaScript handshake. */
+html.hh-page-scroll,
+html.hh-page-scroll body {
+  height:auto!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  scroll-behavior:auto!important;
+  touch-action:pan-x pinch-zoom;
+}
+html.hh-page-scroll .hero {height:calc(var(--hh-viewport-height, 800px) - 90px)}
+html.hh-page-scroll .chapter-nav {position:relative;top:auto;will-change:transform}
+html.hh-page-scroll .sticky-scene {position:relative;top:auto;will-change:transform}
+html.hh-page-scroll .reading-progress {position:absolute;will-change:transform}
+@media(max-width:620px) {
+  html.hh-page-scroll .hero {height:calc(var(--hh-viewport-height, 800px) - 76px)}
+  html.hh-page-scroll .scene-column {position:relative;top:auto}
+  html.hh-page-scroll .sticky-scene {background:#18131f;box-shadow:0 12px 14px #18131f}
+}
+@media print {
+  html.hh-page-scroll,html.hh-page-scroll body {overflow:visible!important}
+}

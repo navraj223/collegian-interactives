@@ -1,5 +1,5 @@
 /* Halloween feature — host this alongside index.html and halloween.css.
-   Runs inside the hosted feature. No script needs to run in the SNO editor. */
+   Runs inside the hosted feature. Full-page mode also requires halloween-parent.js on SNO. */
 (function () {
   'use strict';
   function init() {
@@ -40,10 +40,14 @@
 
     function update() {
       queued = false;
-      const focusLine = window.innerHeight * (window.innerWidth <= 620 ? .54 : .49);
+      const viewport = window.hhPageViewport;
+      const viewportHeight = viewport ? viewport.height : window.innerHeight;
+      const parentY = viewport ? viewport.y : 0;
+      const scrollTop = viewport ? Math.max(0, parentY) : window.scrollY;
+      const focusLine = viewportHeight * (window.innerWidth <= 620 ? .54 : .49);
       let chosen = steps[0];
       for (const step of steps) {
-        if (step.getBoundingClientRect().top <= focusLine) chosen = step;
+        if (step.getBoundingClientRect().top - parentY <= focusLine) chosen = step;
       }
       const nextScene = chosen.dataset.scene;
       if (chosen !== activeStep) {
@@ -73,16 +77,16 @@
       const sameScene = steps.filter(step => step.dataset.scene === activeScene);
       const first = sameScene[0].getBoundingClientRect();
       const last = sameScene[sameScene.length - 1].getBoundingClientRect();
-      let progress = ease(clamp((focusLine - first.top) / Math.max(1, last.bottom - first.top)));
+      let progress = ease(clamp((focusLine - (first.top - parentY)) / Math.max(1, last.bottom - first.top)));
       if (!motion || Date.now() < manualUntil) progress = 1;
       root.style.setProperty('--door-width', String(1 - .9 * progress));
       root.style.setProperty('--door-skew', (-9 * progress) + 'deg');
       root.style.setProperty('--trunk-lift', (-125 * progress) + 'px');
       root.style.setProperty('--trunk-scale', String(1 - .35 * progress));
       root.style.setProperty('--scene-progress', (100 * progress) + '%');
-      const maximum = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      root.style.setProperty('--reading', (clamp(window.scrollY / maximum) * 100) + '%');
-      root.style.setProperty('--hero-shift', (motion ? clamp(window.scrollY * .12, 0, hero.offsetHeight * .15) : 0) + 'px');
+      const maximum = Math.max(1, (viewport ? document.body.offsetHeight : document.documentElement.scrollHeight) - viewportHeight);
+      root.style.setProperty('--reading', (clamp(scrollTop / maximum) * 100) + '%');
+      root.style.setProperty('--hero-shift', (motion ? clamp(scrollTop * .12, 0, hero.offsetHeight * .15) : 0) + 'px');
     }
 
     function schedule() {
@@ -146,6 +150,7 @@
     motionButton.addEventListener('click', () => setMotion(!motion));
     if (preference.addEventListener) preference.addEventListener('change', event => setMotion(!event.matches));
     window.addEventListener('scroll', schedule, { passive:true });
+    window.addEventListener('hh:viewport', schedule);
     window.addEventListener('resize', schedule);
     window.addEventListener('load', schedule);
     if (window.ResizeObserver) {

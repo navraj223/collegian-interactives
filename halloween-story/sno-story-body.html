@@ -1,62 +1,78 @@
-<!-- Paste this entire file into the SNO story body's Text/HTML editor.
-     The iframe URL below is the verified deployed feature.
-     Keep your existing SNO headline, byline, and featured-image fields.
-     All reporting and animation live in the hosted index.html.
-     Do not keep the old article paragraphs in this body too: that duplicates it. -->
-
 <style>
-/* Scoped to this story by the presence of the feature's unique ID. */
+html:has(#hh-halloween-feature),
+body:has(#hh-halloween-feature),
+body:has(#hh-halloween-feature) #wrap,
+body:has(#hh-halloween-feature) #sno-sites-main-content,
+body:has(#hh-halloween-feature) #sno-main-content {
+  background:#18131f!important;
+}
 body:has(#hh-halloween-feature) #sno-main-content,
-body:has(#hh-halloween-feature) #sno-story-body-content {
-  background:#18131f;
-  color:#f4e8ce;
+body:has(#hh-halloween-feature) .sno-story-wrap,
+body:has(#hh-halloween-feature) .sno-story-container,
+body:has(#hh-halloween-feature) #sno-story-body-content,
+#sno-story-body-content :has(#hh-halloween-feature) {
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:visible!important;
+  background:#18131f!important;
 }
-body:has(#hh-halloween-feature) #sno-main-content h1 {
-  color:#f4e8ce;
-}
-body:has(#hh-halloween-feature) .sno-story-deck,
-body:has(#hh-halloween-feature) .sno-story-byline,
-body:has(#hh-halloween-feature) .sno-story-byline span {
-  color:#d8c9d7;
-}
-body:has(#hh-halloween-feature) .sno-story-byline a {
-  color:#efa15f;
+body:has(#hh-halloween-feature) #sno-main-content .sno-story-headline,
+body:has(#hh-halloween-feature) #sno-main-content .sno-story-deck,
+body:has(#hh-halloween-feature) #sno-main-content .sno-story-byline {
+  display:none!important;
 }
 #hh-halloween-feature {
-  width:100%;
-  margin:0;
-  padding:0;
-  background:#18131f;
-  color:#f4e8ce;
-  border:1px solid #705469;
+  box-sizing:border-box!important;
+  width:100vw!important;
+  max-width:none!important;
+  margin:0 calc(50% - 50vw)!important;
+  padding:0!important;
+  border:0!important;
+  background:#18131f!important;
 }
 #hh-halloween-feature iframe {
-  display:block;
-  width:100%;
-  height:88svh;
-  min-height:690px;
-  max-height:1000px;
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  height:100vh;
+  min-height:600px;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:#18131f!important;
+}
+#hh-halloween-feature [data-hh-fallback] {
+  padding:12px 20px;
   margin:0;
-  padding:0;
-  border:0;
-  background:#18131f;
+  color:#f4e8ce;
+  font:14px/1.5 Arial,sans-serif;
 }
-@media(max-width:620px) {
-  #hh-halloween-feature iframe {
-    height:85svh;
-    min-height:610px;
-  }
-}
+#hh-halloween-feature [data-hh-fallback] a {color:#efa15f}
+#hh-halloween-feature [data-hh-fallback][hidden] {display:none!important}
+html:has(#hh-halloween-feature),
+body:has(#hh-halloween-feature) {overflow-x:clip!important}
 </style>
-
 <div id="hh-halloween-feature">
-  <!-- Hosted feature verified at the URL below. The root doorbell remains separate. -->
+  <p data-hh-fallback>
+    <a href="https://navrajd.com/collegian-interactives/halloween-story/" target="_blank" rel="noopener">Open the full-screen story</a>
+  </p>
   <iframe
-    src="https://navrajd.com/collegian-interactives/halloween-story/"
+    data-hh-page-scroll
+    data-top-offset="80"
+    src="https://navrajd.com/collegian-interactives/halloween-story/?v=page-scroll-1"
     title="Trick or trunk? An interactive Collegian Halloween feature"
     width="100%"
-    height="800"
+    height="900"
     loading="eager"
-    style="display:block;width:100%;border:0;background:#18131f;"
   ></iframe>
 </div>
+<!-- This script must execute ON THE SNO PAGE.
+     If the editor filters it, load this same script through an approved SNO
+     custom-code location instead. It does nothing on pages without this iframe. -->
+<script src="https://navrajd.com/collegian-interactives/halloween-story/halloween-parent.js?v=page-scroll-1" defer></script>
