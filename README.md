@@ -1,5 +1,9 @@
 # Collegian interactives
 
+Live demo: https://navrajd.com/collegian-interactives/
+
+Repository: https://github.com/navraj223/collegian-interactives
+
 Small static interactives for embedding in Collegian stories. The first demo is a click-to-open Halloween doorway adapted from the supplied story prototype.
 
 ## Preview locally
@@ -23,13 +27,13 @@ The door also works without JavaScript using native HTML details/summary. Fonts 
 
 ## Publish on GitHub Pages
 
-In repository Settings → Pages, choose **Deploy from a branch**, then **main** and **/(root)**. Use the actual URL shown by GitHub after the deployment succeeds.
+GitHub Pages is configured to deploy from **main** and **/(root)** with HTTPS enforced. Pushing changes republishes the same URL. The site inherits the account’s existing `navrajd.com` domain.
 
 Add an iframe with that URL through SNO Story Element → Generic Embed. Start with a width of 100% and height of 450 pixels. Test the saved story preview on mobile and desktop; adjust height if the site adds spacing. Keep the article text in WordPress.
 
 ```html
 <iframe
-  src="REPLACE_WITH_PUBLISHED_URL"
+  src="https://navrajd.com/collegian-interactives/"
   title="A little Halloween nostalgia: open the door"
   width="100%"
   height="450"
