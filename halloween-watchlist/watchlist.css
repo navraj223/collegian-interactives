@@ -12,7 +12,16 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
 }
 #halloween-video-watchlist *, #halloween-video-watchlist *::before, #halloween-video-watchlist *::after {box-sizing:border-box}
 #halloween-video-watchlist button {font:inherit; color:inherit; -webkit-tap-highlight-color:transparent}
-#halloween-video-watchlist::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,#64304d40,transparent 50%),radial-gradient(ellipse at 95% 40%,#47325725,transparent 50%)}
+#halloween-video-watchlist::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,#64304d40,transparent 50%),radial-gradient(ellipse at 95% 40%,#8c431522,transparent 50%),radial-gradient(ellipse at 10% 70%,#6b35201c,transparent 55%)}
+#halloween-video-watchlist .ah-web {position:absolute;pointer-events:none;user-select:none;overflow:visible}
+#halloween-video-watchlist .ah-web-strands {fill:none;stroke:#beacbd;stroke-opacity:.32;stroke-width:.85;stroke-linecap:round;stroke-linejoin:round}
+#halloween-video-watchlist .ah-web-corner {width:164px;height:auto;top:0;right:0;transform:scaleX(-1)}
+#halloween-video-watchlist .ah-spider {fill:#9d8b9c;stroke:#9d8b9c;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+#halloween-video-watchlist .ah-spider path {fill:none}
+#halloween-video-watchlist .ah-catalog {position:relative;min-width:0}
+#halloween-video-watchlist .ah-web-shelf {width:77px;height:auto;right:-9px;bottom:63px;transform:rotate(180deg);z-index:4}
+#halloween-video-watchlist .ah-web-shelf .ah-web-strands {stroke:#dfbb93;stroke-opacity:.36;stroke-width:1}
+#halloween-video-watchlist .ah-article-header,#halloween-video-watchlist .ah-intro {position:relative}
 #halloween-video-watchlist .ah-sr {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 #halloween-video-watchlist .ah-article-header {padding:5px 0 22px;border-bottom:1px solid var(--ah-line)}
 #halloween-video-watchlist h1.ah-headline {font:600 clamp(34px,5.4cqi,54px)/1.04 var(--ah-display);letter-spacing:.15px;text-transform:none;color:var(--ah-ink);margin:0;max-width:850px;overflow-wrap:break-word}
@@ -29,7 +38,8 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
 #halloween-video-watchlist .ah-section-head {display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 24px;font:400 11px/1.4 var(--ah-mono);text-transform:uppercase;letter-spacing:1.2px;color:var(--ah-muted)}
 #halloween-video-watchlist .ah-section-head strong {font-weight:400;color:var(--ah-ink)}
 #halloween-video-watchlist .ah-shelf {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;gap:14px;padding:0 9px 17px;margin:0 0 27px;position:relative;perspective:850px;min-width:0}
-#halloween-video-watchlist .ah-shelf::after {content:'';position:absolute;left:0;right:0;bottom:0;height:17px;background:linear-gradient(#72515a 0 2px,#3d2b36 2px 6px,#2c202d 6px 10px,#16101d 10px);border-radius:1px;box-shadow:0 8px 12px #08060d77}
+#halloween-video-watchlist .ah-shelf::before {content:'';position:absolute;left:-5px;right:-5px;bottom:-20px;height:110px;pointer-events:none;background:radial-gradient(ellipse at 50% 82%,#ff8b2830,transparent 72%);z-index:0}
+#halloween-video-watchlist .ah-shelf::after {content:'';position:absolute;left:0;right:0;bottom:0;height:17px;background:linear-gradient(#d4935c 0 1px,#805340 1px 3px,#4b302e 3px 7px,#38252a 7px 12px,#20151e 12px 15px,#d67a3d 15px 16px,#4f2d25 16px);border-radius:1px;box-shadow:0 4px 9px #f677262b,0 10px 18px #08060d88,inset 0 -1px 0 #ffaa5f55;z-index:2}
 #halloween-video-watchlist .ah-vhs {position:relative;display:block;min-width:0;width:100%;aspect-ratio: .66;padding:0;border:0;background:#100d14;border-radius:2px 4px 3px 2px;box-shadow:5px 2px 0 #0e0b13,6px 3px 0 #4f3d4e,9px 7px 12px #08060a55;transform-origin:50% 90%;transition:transform .28s cubic-bezier(.2,.7,.3,1),filter .2s,box-shadow .2s;filter:saturate(.82);text-align:left;z-index:1}
 #halloween-video-watchlist .ah-vhs::before {content:'';position:absolute;inset:0 auto 0 0;width:7px;z-index:5;background:linear-gradient(90deg,#04030566,#fff1de0a,#00000055);border-right:1px solid #00000066}
 #halloween-video-watchlist .ah-vhs::after {content:'';position:absolute;inset:0;z-index:6;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,#fff5d516,transparent 30%,transparent 65%,#00000032);box-shadow:inset 0 0 0 1px #f5dbc51c,inset 0 -3px 0 #00000066}
@@ -37,7 +47,7 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
 #halloween-video-watchlist .ah-vhs[aria-pressed=true] {transform:translateY(-12px) rotate(-3deg);filter:saturate(1.1);box-shadow:5px 2px 0 #100a15,6px 3px 0 var(--ah-orange),0 0 0 2px var(--ah-orange),12px 14px 18px #00000070;z-index:2}
 #halloween-video-watchlist .ah-vhs[aria-pressed=true] .ah-in-stock {background:var(--ah-orange);color:#241724}
 #halloween-video-watchlist .ah-cover {display:flex;flex-direction:column;position:absolute;inset:0 0 0 4px;overflow:hidden;background:var(--cover-bg);color:var(--cover-ink);padding:10px 8px 8px 9px;border-radius:0 3px 3px 0}
-#halloween-video-watchlist .ah-cover::after {content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#fff9e503 0px,#fff9e503 1px,transparent 1px,transparent 3px);z-index:3;mix-blend-mode:screen}
+#halloween-video-watchlist .ah-cover::after {content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(101deg,transparent 0 17%,#fff5d40c 17.2% 17.8%,transparent 18% 81%,#fff5d40b 81.2% 81.6%,transparent 82%),repeating-linear-gradient(0deg,#fff9e503 0px,#fff9e503 1px,transparent 1px,transparent 3px);z-index:3;mix-blend-mode:screen}
 #halloween-video-watchlist .ah-cover-issue {position:relative;z-index:2;display:flex;justify-content:space-between;gap:3px;font:400 8px/1 var(--ah-mono);letter-spacing:.5px;opacity:.85}
 #halloween-video-watchlist .ah-cover-title {position:relative;z-index:2;font:700 clamp(15px,2.75cqi,28px)/.94 var(--ah-display);letter-spacing:.05px;text-transform:uppercase;overflow-wrap:normal;margin-top:12px;text-shadow:0 1px 5px #00000035}
 #halloween-video-watchlist .ah-cover-title.ah-long {font-size:clamp(14px,2.32cqi,24px)}
@@ -78,11 +88,16 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
 #halloween-video-watchlist .ah-page-button {background:transparent;border:1px solid var(--ah-line);border-radius:2px;min-width:38px;min-height:36px;display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .15s}
 #halloween-video-watchlist .ah-page-button:hover:not(:disabled) {background:#3b2a43}
 #halloween-video-watchlist .ah-page-button:disabled {opacity:.3}
-#halloween-video-watchlist .ah-counter {background:linear-gradient(150deg,#302437,#231c2b 65%);border:1px solid #5c40544d;border-top:2px solid #b88d79;position:relative;min-width:0;padding:17px 20px 20px;border-radius:2px}
+#halloween-video-watchlist .ah-counter {background:radial-gradient(ellipse at 90% 18%,#d0692326,transparent 55%),linear-gradient(150deg,#302437,#231c2b 65%);border:1px solid #8f5d424d;border-top:2px solid #ca9568;position:relative;min-width:0;padding:17px 20px 20px;border-radius:2px;box-shadow:0 -9px 28px -20px #ff8d32a1}
 #halloween-video-watchlist .ah-counter::before {content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff02 0 1px,transparent 1px 4px)}
 #halloween-video-watchlist .ah-counter-head {display:flex;justify-content:space-between;align-items:center;gap:10px;font:400 11px/1.4 var(--ah-mono);color:var(--ah-muted);letter-spacing:1px;margin:0 0 17px;text-transform:uppercase}
 #halloween-video-watchlist .ah-counter-dot {display:inline-block;width:5px;height:5px;background:var(--ah-orange);border-radius:50%;margin-right:6px;vertical-align:middle;box-shadow:0 0 7px #ffad7533}
-#halloween-video-watchlist .ah-cassette-stage {position:relative;padding:4px 6px 22px;display:flex;justify-content:center}
+#halloween-video-watchlist .ah-cassette-stage {position:relative;isolation:isolate;padding:12px 14% 43px 0;display:flex;justify-content:flex-start;max-width:350px;width:100%;margin-inline:auto}
+#halloween-video-watchlist .ah-cassette-stage::after {content:'';position:absolute;left:0;right:0;bottom:15px;height:1px;background:linear-gradient(90deg,transparent,#c78e5e45 40%,#c78e5e73 85%,transparent);z-index:-1}
+#halloween-video-watchlist .ah-pumpkin {position:absolute;width:37%;max-width:115px;right:-3px;bottom:13px;transform:rotate(5deg);pointer-events:none;z-index:2}
+#halloween-video-watchlist .ah-pumpkin::before {content:'';position:absolute;left:-38%;right:-38%;top:24%;bottom:-12%;background:radial-gradient(ellipse,#ff9c3430,transparent 70%);filter:blur(8px);z-index:-1}
+#halloween-video-watchlist .ah-pumpkin svg {display:block;width:100%;height:auto;overflow:visible}
+#halloween-video-watchlist .ah-pumpkin-face {filter:drop-shadow(0 0 3px #ffc55985)}
 #halloween-video-watchlist .ah-cassette {position:relative;width:100%;max-width:255px;aspect-ratio:1.76;background:linear-gradient(145deg,#322e36,#16131d 35%,#211e27);border-radius:6px;border:2px solid #111017;box-shadow:inset 0 0 0 1px #544b57,5px 11px 13px #100b1655;transform:rotate(-4deg);padding:10px 10px 20px}
 #halloween-video-watchlist .ah-cassette::before {content:'';position:absolute;inset:3px;border-radius:3px;pointer-events:none;background:radial-gradient(circle at 2% 3%,#99909c 0 1px,transparent 2px),radial-gradient(circle at 98% 3%,#99909c 0 1px,transparent 2px),radial-gradient(circle at 2% 97%,#99909c 0 1px,transparent 2px),radial-gradient(circle at 98% 97%,#99909c 0 1px,transparent 2px)}
 #halloween-video-watchlist .ah-tape-label {height:39%;min-height:26px;padding:5px 6px;background:#e6d9bb;color:#322331;border-radius:2px 2px 0 0;border-top:3px solid #b14f49;display:flex;align-items:center;justify-content:space-between;gap:8px}
@@ -105,7 +120,8 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
 @container (max-width: 760px) {
   #halloween-video-watchlist .ah-store {grid-template-columns:1fr;gap:20px}
   #halloween-video-watchlist .ah-counter-body {display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:24px;align-items:start}
-  #halloween-video-watchlist .ah-cassette-stage {padding:18px 0 20px}
+  #halloween-video-watchlist .ah-cassette-stage {padding:18px 10% 44px 0}
+  #halloween-video-watchlist .ah-pumpkin {width:39%;right:-7px;bottom:13px}
   #halloween-video-watchlist .ah-cover-title {font-size:clamp(18px,4cqi,27px)}
   #halloween-video-watchlist .ah-cover-title.ah-long {font-size:clamp(16px,3.6cqi,25px)}
   #halloween-video-watchlist .ah-cover-title.ah-extra-long {font-size:clamp(15px,3.2cqi,23px)}
@@ -115,7 +131,11 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
   #halloween-video-watchlist .ah-surprise {min-height:44px}
   #halloween-video-watchlist .ah-article-header {padding-top:15px}
   #halloween-video-watchlist .ah-counter-body {grid-template-columns:1fr;gap:0}
-  #halloween-video-watchlist .ah-cassette-stage {padding:0 0 20px}
+  #halloween-video-watchlist .ah-cassette-stage {padding:10px 16% 43px 0;max-width:320px}
+  #halloween-video-watchlist .ah-pumpkin {width:34%;max-width:105px;right:0;bottom:12px}
+  #halloween-video-watchlist .ah-web-corner {width:104px;opacity:.75}
+  #halloween-video-watchlist .ah-spider {display:none}
+  #halloween-video-watchlist .ah-web-shelf {width:68px;right:-5px}
   #halloween-video-watchlist .ah-cassette {max-width:220px}
   #halloween-video-watchlist .ah-shelf {grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-inline:11px}
   #halloween-video-watchlist .ah-cover-title {font-size:clamp(23px,7cqi,32px)}

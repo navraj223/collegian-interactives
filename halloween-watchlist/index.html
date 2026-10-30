@@ -6,12 +6,25 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="Explore Raul Ramirez’s Halloween watchlist: 31 movies, illustrated VHS shelves, and coffin scores for overall movie quality.">
   <title>From Grim to Grin: 31 Movies for Your Halloween Watchlist</title>
-  <link rel="stylesheet" href="./watchlist.css">
+  <link rel="stylesheet" href="./watchlist.css?v=atmosphere-5e67e5b4">
   <script src="./watchlist.js" defer></script>
   <script src="./watchlist-child.js" defer></script>
 </head>
 <body>
 <section id="halloween-video-watchlist" aria-labelledby="ah-watchlist-headline">
+  <!-- Decorative line art: every strand and shape is drawn inline, without images. -->
+  <svg class="ah-web ah-web-corner" viewBox="0 0 180 220" aria-hidden="true" focusable="false">
+    <g class="ah-web-strands">
+      <path d="M0 0H172M0 0 164 53M0 0 139 101M0 0 101 139M0 0 53 164M0 0V172"/>
+      <path d="M30 0Q24 4 28.5 9.3Q21 11 24.3 17.6Q16 17 17.6 24.3Q9 22 9.3 28.5Q4 24 0 30M60 0Q48 8 57 18.6Q42 22 48.6 35.2Q32 34 35.2 48.6Q18 44 18.6 57Q8 48 0 60M90 0Q72 12 85.5 27.9Q63 33 72.9 52.8Q48 51 52.8 72.9Q27 66 27.9 85.5Q12 72 0 90M123 0Q98 17 117 38Q86 45 100 72Q66 70 72 100Q37 90 38 117Q17 98 0 123M160 0Q128 22 152 49Q112 59 130 94Q85 91 94 130Q48 117 49 152Q22 128 0 160"/>
+      <path d="M53 164V192"/>
+    </g>
+    <g class="ah-spider">
+      <path d="m51 196-6-5-4 2m10 6-8-1-3 4m11 0-7 3-1 5m12-14 6-5 4 2m-10 6 8-1 3 4m-11 0 7 3 1 5"/>
+      <ellipse cx="53" cy="200" rx="4.5" ry="6"/>
+      <circle cx="53" cy="193" r="3"/>
+    </g>
+  </svg>
   <header class="ah-article-header">
     <h1 class="ah-headline" id="ah-watchlist-headline"><span class="ah-headline-lead">From Grim to Grin:</span> 31 Movies for Your Halloween Watchlist</h1>
     <p class="ah-byline">By <strong>Raul Ramirez</strong>, Reporter</p>
@@ -24,6 +37,12 @@
 
   <div class="ah-store">
     <div class="ah-catalog">
+      <svg class="ah-web ah-web-shelf" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+        <g class="ah-web-strands">
+          <path d="M0 0H120M0 0 114 37M0 0 97 71M0 0 71 97M0 0 37 114M0 0V120"/>
+          <path d="M28 0Q22 4 26.6 8.7Q20 10 22.7 16.4Q15 16 16.4 22.7Q8 20 8.7 26.6Q4 22 0 28M55 0Q44 7 52.2 17Q39 20 44.5 32.3Q29 31 32.3 44.5Q17 40 17 52.2Q7 44 0 55M84 0Q67 11 79.8 26Q59 31 68 49.3Q45 48 49.3 68Q25 62 26 79.8Q11 67 0 84M115 0Q92 15 109.2 35.6Q80 42 93.1 67.5Q61 65 67.5 93.1Q35 84 35.6 109.2Q15 92 0 115"/>
+        </g>
+      </svg>
       <div class="ah-section-head"><strong>Browse the shelves</strong><span>Pick a tape ↓</span></div>
       <div class="ah-rack" role="group" aria-label="Movie cases"></div>
       <nav class="ah-pager" aria-label="Browse movie shelves">
@@ -37,6 +56,41 @@
       <div class="ah-counter-body">
         <div class="ah-cassette-stage" aria-hidden="true">
           <div class="ah-cassette"><div class="ah-tape-label"><span class="ah-tape-title">The Texas Chain Saw Massacre</span><small>VHS</small></div><div class="ah-tape-window"><div class="ah-reel"></div><div class="ah-reel"></div></div></div>
+          <div class="ah-pumpkin">
+            <svg viewBox="0 0 160 170" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="ah-pumpkin-skin" x1="0" y1="0" x2="0.85" y2="1">
+                  <stop stop-color="#faae50"/><stop offset="0.4" stop-color="#e57722"/><stop offset="1" stop-color="#843217"/>
+                </linearGradient>
+                <linearGradient id="ah-pumpkin-center" x1="0" y1="0" x2="1" y2="0.85">
+                  <stop stop-color="#f99a36"/><stop offset="0.48" stop-color="#fba447"/><stop offset="1" stop-color="#ba4a1b"/>
+                </linearGradient>
+                <linearGradient id="ah-pumpkin-candle" x1="0" y1="0" x2="0.2" y2="1">
+                  <stop stop-color="#ffe29a"/><stop offset="0.55" stop-color="#ffd570"/><stop offset="1" stop-color="#ff972c"/>
+                </linearGradient>
+                <linearGradient id="ah-pumpkin-stem" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#8d9461"/><stop offset="0.5" stop-color="#5b6543"/><stop offset="1" stop-color="#323c31"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="80" cy="153" rx="66" ry="9" fill="#100b16" opacity="0.5"/>
+              <path d="M74 45C76 29 68 22 76 12L89 9 94 16C79 25 91 30 87 46Z" fill="url(#ah-pumpkin-stem)" stroke="#343729" stroke-width="2"/>
+              <path d="M80 40C79 29 76 23 83 16" fill="none" stroke="#c1b474" stroke-opacity="0.45" stroke-width="2"/>
+              <path d="M82 44C103 28 134 35 145 64 158 96 145 138 117 146 98 153 89 149 80 147 62 154 37 149 23 134 3 115 5 77 18 57 33 35 56 32 76 45Z" fill="url(#ah-pumpkin-skin)" stroke="#78381f" stroke-width="2"/>
+              <ellipse cx="55" cy="93" rx="33" ry="55" fill="url(#ah-pumpkin-skin)"/>
+              <ellipse cx="106" cy="93" rx="31" ry="55" fill="url(#ah-pumpkin-skin)"/>
+              <ellipse cx="80" cy="94" rx="31" ry="57" fill="url(#ah-pumpkin-center)"/>
+              <g fill="none" stroke="#903c1b" stroke-width="1.8" opacity="0.55">
+                <path d="M55 42C32 67 34 123 55 146M108 42C131 65 129 125 108 145M75 40C60 72 62 124 73 149M87 40C102 71 100 128 88 149"/>
+              </g>
+              <g class="ah-pumpkin-face" fill="url(#ah-pumpkin-candle)" stroke="#863c18" stroke-width="3.5" stroke-linejoin="round">
+                <path d="m33 82 23-24 10 29Z"/>
+                <path d="m94 87 10-29 23 24Z"/>
+                <path d="m73 99 7-14 9 14Z"/>
+                <path d="M33 102 48 112 54 106 63 118 76 117 82 109 93 116 105 104 113 110 128 100C122 126 101 136 80 137 58 135 41 124 33 102Z"/>
+              </g>
+              <path d="M20 80C19 93 20 108 25 117M36 53 43 49" fill="none" stroke="#ffd08a" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+            </svg>
+          </div>
         </div>
         <div class="ah-film-info">
           <h3 class="ah-film-title">The Texas Chain Saw Massacre</h3>
