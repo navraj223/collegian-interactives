@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Explore Raul Ramirez’s Halloween watchlist: 31 movies, illustrated VHS shelves, and coffin scores for overall movie quality.">
+  <title>From Grim to Grin: 31 Movies for Your Halloween Watchlist</title>
+  <link rel="stylesheet" href="./watchlist.css">
+  <script src="./watchlist.js" defer></script>
+  <script src="./watchlist-child.js" defer></script>
+</head>
+<body>
+<section id="halloween-video-watchlist" aria-labelledby="ah-watchlist-headline">
+  <header class="ah-article-header">
+    <h1 class="ah-headline" id="ah-watchlist-headline"><span class="ah-headline-lead">From Grim to Grin:</span> 31 Movies for Your Halloween Watchlist</h1>
+    <p class="ah-byline">By <strong>Raul Ramirez</strong>, Reporter</p>
+  </header>
+
+  <div class="ah-intro">
+    <p class="ah-deck">From the darkest corners of horror to Halloween favorites.<br>Pull a tape off the shelf. Find your next movie night.</p>
+    <button class="ah-surprise cursor-interaction" type="button"><span class="ah-shuffle" aria-hidden="true">⇄</span>Choose a movie for me</button>
+  </div>
+
+  <div class="ah-store">
+    <div class="ah-catalog">
+      <div class="ah-section-head"><strong>Browse the shelves</strong><span>Pick a tape ↓</span></div>
+      <div class="ah-rack" role="group" aria-label="Movie cases"></div>
+      <nav class="ah-pager" aria-label="Browse movie shelves">
+        <span class="ah-page-text">Shelf <span class="ah-page-current">1</span> of <span class="ah-page-total">4</span> · <span class="ah-page-range">01–08</span> / 31</span>
+        <div class="ah-page-controls"><button class="ah-page-button ah-prev cursor-interaction" type="button" aria-label="Previous shelf" disabled>←</button><button class="ah-page-button ah-next cursor-interaction" type="button" aria-label="Next shelf">→</button></div>
+      </nav>
+    </div>
+
+    <article class="ah-counter" aria-label="Selected movie review">
+      <div class="ah-counter-head"><span><span class="ah-counter-dot" aria-hidden="true"></span>At the counter</span><span class="ah-inventory">NO. 01</span></div>
+      <div class="ah-counter-body">
+        <div class="ah-cassette-stage" aria-hidden="true">
+          <div class="ah-cassette"><div class="ah-tape-label"><span class="ah-tape-title">The Texas Chain Saw Massacre</span><small>VHS</small></div><div class="ah-tape-window"><div class="ah-reel"></div><div class="ah-reel"></div></div></div>
+        </div>
+        <div class="ah-film-info">
+          <h3 class="ah-film-title">The Texas Chain Saw Massacre</h3>
+          <p class="ah-film-year">1974 · Film 01 of 31</p>
+          <div class="ah-rating" aria-label="Coffin score: 5 out of 5"><div class="ah-coffins" aria-hidden="true"></div><span class="ah-score" aria-hidden="true">5/5</span><span class="ah-score-label">COFFIN SCORE</span></div>
+          <p class="ah-review"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="ah-bottom"><span>Coffin scores rate movie quality: 1 Poor · 2 Average · 3 Good · 4 Great · 5 Perfect</span></div>
+  <div class="ah-status ah-sr" role="status" aria-live="polite" aria-atomic="true"></div>
+</section>
+</body>
+</html>
