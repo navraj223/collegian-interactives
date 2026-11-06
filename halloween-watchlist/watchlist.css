@@ -7,7 +7,7 @@ html, body { margin: 0; padding: 0; background: #18131f; color: #f3e9d6; }
   --ah-orange:#ffad75; --ah-spectral:#bce5cb; --ah-pink:#e7a1e5; --ah-line:#49374e; --ah-mono:'Space Mono',monospace;
   --ah-display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
   position:relative; isolation:isolate; color:var(--ah-ink); background:var(--ah-bg);
-  font:400 14px/1.5 'DM Sans',Arial,sans-serif; max-width:1440px;margin-inline:auto;padding:30px 32px 24px; box-sizing:border-box;
+  font:400 14px/1.5 'DM Sans',Arial,sans-serif; width:100%;padding:30px 32px 24px; box-sizing:border-box;
   container-type:inline-size;
 }
 #halloween-video-watchlist *, #halloween-video-watchlist *::before, #halloween-video-watchlist *::after {box-sizing:border-box}
