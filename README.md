@@ -44,11 +44,11 @@ Add an iframe with that URL through SNO Story Element → Generic Embed. Start w
 
 The iframe is a click-based component. It does not track scrolling in the parent article. Embedding in the live SNO story still needs verification in its saved preview.
 
-## Halloween movie watchlist
+## Horror movie watchlist
 
 Live feature: https://navrajd.com/collegian-interactives/halloween-watchlist/
 
-`halloween-watchlist/` contains the approved **From Grim to Grin: 31 Movies for Your Halloween Watchlist** interactive by Raul Ramirez, Reporter. All 31 original reviews, years, quality scores, and code-drawn illustrations are preserved. It uses plain HTML/CSS/JavaScript with inline SVG decorations and Google Fonts with local fallbacks; there is no build step.
+`halloween-watchlist/` contains the approved **From grim to grin: 31 movies for your horror watchlist** interactive by Raul Ramirez, Reporter. All 31 reviews, years, quality scores, and code-drawn cover illustrations are retained. The presentation is a year-round haunted video rental store, with a coffin scale by the introduction and a grim-to-grin collection guide. Only the generic seasonal language in the Coraline and Rocky Horror reviews was updated; film-specific references in Halloweentown remain. It uses plain HTML/CSS/JavaScript with inline SVG decorations and Google Fonts with local fallbacks; there is no build step.
 
 For SNO, select **Full Screen Embed** and paste the entire contents of `halloween-watchlist/SNO-embed.html` into **Video/Embed → Add Video or Embed Code**. The `watchlist-parent.js` script must run on the outer SNO page. Keep it paired with `watchlist-child.js`; their independent `collegian-movie-watchlist:v1` channel does not affect Trunk or Treat.
 
